@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+body {
+    padding-top: 5%;
+    background-image: url("/src/assets/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    margin-inline: 200px;
+}
+
+header img {
+    width: 200px;
+    margin-bottom: 50px;
+}
+
+h1 {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 50px;
+}
+
+h1 span {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #900080;
+    margin-bottom: 0px;
+}
+
+p {
+    margin-top: 5px;
+}
+
+ul {
+    margin-block: 40px;
+    line-height: 25px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+footer {
+    margin-block: 10%;
+    min-height: 80px;
+}
+
+
+button {
+    float: right;
+    border: none;
+    font-size: 25px;
+    font-weight: bold;
+    width: 250px;
+    padding: 20px;
+    background-color: #00ffff;
+    box-shadow: 0 0 20px rgba(79, 255, 255, 1)
+}
+
+label {
+    font-weight: 500;
+}
+
+label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 30px;
+}
+
+label:before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    background-color: transparent;
+    outline: 3px solid white;
+    box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+}
+
+input[type=checkbox]:checked+label:before {
+    content: "\2713";
+    text-align: center;
+    line-height: 12px;
+}
+
+.checkbox {
+    padding-top: 25px;
+    display: inline-block;
+}
+
+#check1 {
+    background-color: transparent;
+    display: none;
+    background-image: url("/src/assets/bg.jpg");
+    accent-color: green;
+    outline: 2px solid white;
+}
