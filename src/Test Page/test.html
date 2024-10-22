@@ -2,14 +2,50 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dynamic Quiz Page</title>
+  <link rel="stylesheet" href="./assets/css/test.css" />
 </head>
 
 <body>
-    <h1>PROVA</h1>
-    <p>CIAO MONDO</p>
+  <!-- Logo-->
+  <img src="/src/assets/epicode_logo.png" alt="Logo" class="logo" />
+
+  <!-- Timer-->
+  <div class="timer-container">
+    <div class="circle">
+      <span id="time-remaining" class="time-remaining">60</span>
+    </div>
+  </div>
+
+  <!-- Main container for questions & options-->
+  <div class="container">
+    <!-- question-->
+    <h1 id="question-title" class="question-title">In 'Hexadecimal', what color would be displayed from the color code
+      '#00FF00'?</h1>
+
+    <!-- options-->
+    <div class="options" id="options-container">
+      <!-- just for test-->
+      <label class="option">
+        <input type="radio" name="answer" value="0"> Red
+      </label>
+      <label class="option">
+        <input type="radio" name="answer" value="1"> Blue
+      </label>
+      <label class="option">
+        <input type="radio" name="answer" value="2"> Yellow
+      </label>
+      <label class="option">
+        <input type="radio" name="answer" value="3"> Green
+      </label>
+    </div>
+    <!-- question status-->
+    <div id="question-status" class="question-status">Question 1 <span>/ 10</span></div>
+  </div>
+
+  <script src="./assets/js/test.js"></script>
 </body>
 
 </html>
