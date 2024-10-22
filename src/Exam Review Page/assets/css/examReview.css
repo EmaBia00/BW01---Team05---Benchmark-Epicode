@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-optical-sizing: auto;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  padding-top: 5%;
+  background-image: url("/src/assets/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  margin-inline: 125px;
+}
+
+header img {
+  width: 200px;
+  margin-bottom: 70px;
+}
+
+button {
+  cursor: pointer;
+  margin-top: 1;
+  text-align: center;
+  border: none;
+  font-size: 25px;
+  font-weight: bold;
+  width: 250px;
+  padding: 20px;
+  background-color: #00ffff;
+  box-shadow: 0 0 20px rgba(79, 255, 255, 1);
+  text-shadow: 0 0 20px rgba(79, 255, 255, 1);
+  color: #0b113b;
+}
+
+button:hover {
+  background-color: #00c4c4;
+}
+
+h1 {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 50px;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: 400;
+  margin-block: 30px;
+}
+
+main {
+  text-align: center;
+  margin-inline: 120px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 50px;
+}
+
+hr {
+  border: 1px solid #D20094;
+}
+
+.stars {
+  min-width: 55px;
+  margin-inline: 8px;
+  filter: invert(54%) sepia(75%) saturate(537%) hue-rotate(130deg) brightness(20%) contrast(101%);
+}
+
+.starsColor {
+  filter: invert(54%) sepia(75%) saturate(537%) hue-rotate(130deg) brightness(104%) contrast(101%);
+}
+
+#feedback {
+  text-align: start;
+}
+
+#textFeed {
+  min-width: 95%;
+  color: white;
+  border: none;
+  background-color: transparent;
+  margin-left: 20px;
+  margin-bottom: 7px;
+  margin-top: 20px;
+}
