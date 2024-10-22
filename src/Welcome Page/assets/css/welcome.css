@@ -59,8 +59,8 @@ footer {
     min-height: 80px;
 }
 
-
 button {
+    cursor: pointer;
     float: right;
     border: none;
     font-size: 25px;
@@ -68,7 +68,11 @@ button {
     width: 250px;
     padding: 20px;
     background-color: #00ffff;
-    box-shadow: 0 0 20px rgba(79, 255, 255, 1)
+    box-shadow: 0 0 20px rgba(79, 255, 255, 1);
+}
+
+button:hover {
+    background-color: #00caca;
 }
 
 label {
@@ -106,9 +110,5 @@ input[type=checkbox]:checked+label:before {
 }
 
 #check1 {
-    background-color: transparent;
     display: none;
-    background-image: url("/src/assets/bg.jpg");
-    accent-color: green;
-    outline: 2px solid white;
 }
