@@ -1,25 +1,25 @@
 * {
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-optical-sizing: auto;
   margin: 0px;
   padding: 0px;
 }
 
 body {
-  padding-top: 5%;
   background-image: url("/src/assets/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   color: white;
-  margin-inline: 125px;
+  margin-inline: 200px;
+  padding-top: 3.65%;
 }
 
 header img {
-  width: 200px;
-  margin-bottom: 70px;
+  width: 170px;
+  margin-bottom: 30px;
 }
 
 button {
@@ -44,13 +44,13 @@ button:hover {
 h1 {
   font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
-  font-size: 60px;
+  font-size: 50px;
   font-weight: bold;
   line-height: 50px;
 }
 
 h3 {
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 400;
   margin-block: 30px;
 }
@@ -70,7 +70,7 @@ hr {
 }
 
 .stars {
-  min-width: 55px;
+  min-width: 40px;
   margin-inline: 8px;
   filter: invert(54%) sepia(75%) saturate(537%) hue-rotate(130deg) brightness(20%) contrast(101%);
 }

@@ -7,18 +7,17 @@
 }
 
 body {
-    padding-top: 5%;
+    padding-top: 3%;
+    margin-inline: 200px;
     background-image: url("/src/assets/bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     color: white;
-    margin-inline: 200px;
 }
 
 header img {
-    width: 200px;
-    margin-bottom: 50px;
+    width: 170px;
 }
 
 h1 {
@@ -55,7 +54,6 @@ strong {
 }
 
 footer {
-    margin-block: 10%;
     min-height: 80px;
 }
 

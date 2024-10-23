@@ -3,7 +3,7 @@ const checkBox = document.getElementById("check1");
 
 btn.onclick = () => {
   if (checkBox.checked) {
-    window.open("/src/Test Page/test.html");
+    window.open("/src/Test Page/test.html", "_self");
   } else {
     alert("Flaggare la checkbox per continuare");
   }

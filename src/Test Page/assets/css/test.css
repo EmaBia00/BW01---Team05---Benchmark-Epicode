@@ -17,24 +17,22 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
-    margin: 0;
 }
 
 /* Logo*/
 .logo {
+    padding-top: 0.5%;
     position: absolute;
     top: 40px;
     left: 40px;
-    width: 150px;
+    width: 170px;
+    margin-inline: 160px;
     /* we can change size the logo*/
 }
 
-
-
-
-
 /* Timer*/
 .timer-container {
+    margin-top: 1.5%;
     position: absolute;
     top: 20px;
     right: 20px;
@@ -45,8 +43,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: 100px;
 }
-
 
 .timer-inner {
     width: 100px;
@@ -99,8 +97,9 @@ body {
 
 /* main question */
 .question-title {
-    margin-top: 50px;
-    font-size: 36px;
+    width: 70%;
+    margin-top: 150px;
+    font-size: 35px;
     margin-bottom: 0;
     color: #EAE8EF;
     font-weight: bold;
@@ -113,7 +112,7 @@ body {
     /* imposta il layout a due colonne per le opzioni */
     gap: 20px;
     /* spazio tra le opzioni */
-    width: 80%;
+    width: 50%;
     /* la larghezza delle opzioni è l'80% della pagina */
     margin-top: 20px;
 }
