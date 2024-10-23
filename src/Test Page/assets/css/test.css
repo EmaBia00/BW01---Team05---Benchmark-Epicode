@@ -1,11 +1,12 @@
 /* Reset default style*/
 * {
     margin: 0;
-    padding:0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     width: 100%;
 }
@@ -24,7 +25,8 @@ body {
     position: absolute;
     top: 40px;
     left: 40px;
-    width: 150px; /* we can change size the logo*/
+    width: 150px;
+    /* we can change size the logo*/
 }
 
 
@@ -33,13 +35,13 @@ body {
 
 /* Timer*/
 .timer-container {
-    position: absolute; 
-    top: 20px; 
-    right: 20px; 
+    position: absolute;
+    top: 20px;
+    right: 20px;
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    background: conic-gradient(#00b0ff 100%, transparent 0%); 
+    background: conic-gradient(#00b0ff 100%, transparent 0%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,15 +49,15 @@ body {
 
 
 .timer-inner {
-    width: 100px; 
+    width: 100px;
     height: 100px;
-    background-color: #602365; 
+    background-color: #602365;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative; 
-    flex-direction: column; 
+    position: relative;
+    flex-direction: column;
 }
 
 
@@ -73,7 +75,7 @@ body {
     font-weight: normal;
     color: #fff;
     position: absolute;
-    top: 10px; 
+    top: 10px;
 }
 
 
@@ -82,7 +84,7 @@ body {
     font-weight: normal;
     color: #fff;
     position: absolute;
-    bottom: 10px; 
+    bottom: 10px;
 }
 
 
@@ -94,15 +96,17 @@ body {
 .container {
     width: 100%;
     height: 100vh;
-    display: grid; /* use the grid to arrange in the center */
-    place-items: center; /* Place internal content in the center of the page */
+    display: grid;
+    /* use the grid to arrange in the center */
+    place-items: center;
+    /* Place internal content in the center of the page */
     text-align: center;
 }
 
 /* main question */
 .question-title {
     font-size: 36px;
-    margin-bottom:0;
+    margin-bottom: 0;
     color: #EAE8EF;
     font-weight: bold;
 }
@@ -110,16 +114,19 @@ body {
 /* options */
 .options {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* imposta il layout a due colonne per le opzioni */
-    gap: 20px; /* spazio tra le opzioni */
-    width: 80%; /* la larghezza delle opzioni è l'80% della pagina */
+    grid-template-columns: repeat(2, 1fr);
+    /* imposta il layout a due colonne per le opzioni */
+    gap: 20px;
+    /* spazio tra le opzioni */
+    width: 80%;
+    /* la larghezza delle opzioni è l'80% della pagina */
     margin-top: 20px;
 }
 
 .option {
-    background-color: transparent; 
+    background-color: transparent;
     padding: 20px;
-    border: 2px solid #ffffff; 
+    border: 2px solid #ffffff;
     border-radius: 30px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
@@ -135,8 +142,8 @@ body {
 }
 
 .option.selected {
-    background-color: #900080; 
-    color: white; 
+    background-color: #900080;
+    color: white;
     border-color: #900080;
 }
 
@@ -148,12 +155,13 @@ input[type="radio"] {
 
 /* Stato della domanda (visualizza la domanda corrente) */
 .question-status {
-    font-size: 18px; 
-    font-weight: bold; 
+    font-size: 18px;
+    font-weight: bold;
     color: #ECE8F0;
-    margin-top: 10px; 
+    margin-top: 10px;
 }
 
 .question-status span {
-    color: #f115b6dd; /* colore rosa per il numero di domande */
+    color: #f115b6dd;
+    /* colore rosa per il numero di domande */
 }

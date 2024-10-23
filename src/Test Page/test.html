@@ -1,52 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dynamic Quiz Page</title>
-    <link rel="stylesheet" href="./assets/css/test.css" />
-  </head>
-  <body>
-    <!-- Logo-->
-    <img src="/src/assets/epicode_logo.png" alt="Logo" class="logo" />
 
-    <!-- Timer-->
-<!-- تایمر در بالای صفحه -->
-<div class="timer-container">
-  <div class="timer-inner">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dynamic Quiz Page</title>
+  <link rel="stylesheet" href="./assets/css/test.css" />
+</head>
+
+<body>
+  <!-- Logo-->
+  <img src="/src/assets/epicode_logo.png" alt="Logo" class="logo" />
+
+  <!-- Timer-->
+  <!-- تایمر در بالای صفحه -->
+  <div class="timer-container">
+    <div class="timer-inner">
       <div class="time-text">SECONDS</div>
       <div class="time-remaining" id="time-remaining">60</div>
       <div class="time-remaining-label">REMAINING</div>
+    </div>
   </div>
-</div>
 
 
 
-    <!-- Main container for questions & options-->
-    <div class="container">
-      <!-- question-->
-      <h1 id="question-title" class="question-title">In 'Hexadecimal', what color would be displayed from the color code '#00FF00'?</h1>
+  <!-- Main container for questions & options-->
+  <div class="container">
+    <!-- question-->
+    <h1 id="question-title" class="question-title">Loading</h1>
 
-      <!-- options-->
-      <div class="options" id="options-container">
-        <!-- just for test-->
-        <label class="option">
-            <input type="radio" name="answer" value="0"> Red
-        </label>
-        <label class="option">
-            <input type="radio" name="answer" value="1"> Blue
-        </label>
-        <label class="option">
-            <input type="radio" name="answer" value="2"> Yellow
-        </label>
-        <label class="option">
-            <input type="radio" name="answer" value="3"> Green
-        </label>
+    <!-- options-->
+    <div class="options" id="options-container">
+      <!-- just for test-->
+      <label class="option">
+        <input type="radio" name="answer" value="0"> Red
+      </label>
+      <label class="option">
+        <input type="radio" name="answer" value="1"> Blue
+      </label>
+      <label class="option">
+        <input type="radio" name="answer" value="2"> Yellow
+      </label>
+      <label class="option">
+        <input type="radio" name="answer" value="3"> Green
+      </label>
     </div>
-      <!-- question status-->
-      <div id="question-status" class="question-status">Question 1 <span>/ 10</span></div>
+    <!-- question status-->
+    <div id="question-status" class="question-status">
     </div>
+  </div>
 
-    <script src="./assets/js/test.js"></script>
-  </body>
+  <script src="./assets/js/test.js"></script>
+</body>
+
 </html>
