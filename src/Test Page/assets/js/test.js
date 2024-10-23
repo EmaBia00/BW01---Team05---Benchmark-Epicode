@@ -77,10 +77,11 @@ let indexQuestionView = 1;
 let correctAnswers = 0;
 let incorrectAnswers = 0;
 let timerInterval;
+let questionAnswered = false;
 
 // Funzione per avviare il timer
 function startTimer() {
-  let timeRemaining = 10; // Imposta il timer su 60 secondi
+  let timeRemaining = 60; // Imposta il timer su 60 secondi
   document.getElementById("time-remaining").textContent = timeRemaining;
 
   clearInterval(timerInterval); // Cancella eventuali timer precedenti
@@ -107,6 +108,7 @@ function startTimer() {
 
 // Funzione per caricare la domanda
 function loadQuestion() {
+  questionAnswered = false;
   const questionData = questions[currentQuestionIndex];
   document.getElementById("question-title").textContent = questionData.question;
 
@@ -122,13 +124,14 @@ function loadQuestion() {
   });
   const questionStatus = document.getElementById("question-status");
   indexQuestionView += currentQuestionIndex;
-  console.log(indexQuestionView);
   questionStatus.innerHTML = `Question ${indexQuestionView} <span> / ${questions.length}</span>`;
   startTimer();
 }
 
 // Funzione per selezionare l'opzione
 function handleOptionSelect(selectedIndex) {
+  if (questionAnswered) return;
+  questionAnswered = true;
   const options = document.querySelectorAll(".option");
   options.forEach((option, index) => {
     if (index === selectedIndex) {
@@ -148,16 +151,17 @@ function handleOptionSelect(selectedIndex) {
 
 // Funzione per passare alla prossima domanda
 function goToNextQuestion() {
-  if (currentQuestionIndex < questions.length) {
+  if (currentQuestionIndex < questions.length - 1) {
     indexQuestionView = 1;
     currentQuestionIndex++;
+    console.log(currentQuestionIndex);
     loadQuestion();
   } else {
-    showResults();
+    localStorage.setItem("correctAnswers", correctAnswers);
+    localStorage.setItem("incorrectAnswers", incorrectAnswers);
+    window.open();
+    // let correctAnswers = localStorage.getItem('correctAnswers');
   }
 }
-
-// Funzione per mostrare i risultati
-//function showResults()
 
 window.onload = loadQuestion;
