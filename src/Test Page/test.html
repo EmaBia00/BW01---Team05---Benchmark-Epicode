@@ -13,36 +13,26 @@
   <img src="/src/assets/epicode_logo.png" alt="Logo" class="logo" />
 
   <!-- Timer-->
+  <!-- تایمر در بالای صفحه -->
   <div class="timer-container">
-    <div class="circle">
-      <span id="time-remaining" class="time-remaining">60</span>
+    <div class="timer-inner">
+      <div class="time-text">SECONDS</div>
+      <div class="time-remaining" id="time-remaining">60</div>
+      <div class="time-remaining-label">REMAINING</div>
     </div>
   </div>
 
   <!-- Main container for questions & options-->
   <div class="container">
     <!-- question-->
-    <h1 id="question-title" class="question-title">In 'Hexadecimal', what color would be displayed from the color code
-      '#00FF00'?</h1>
+    <h1 id="question-title" class="question-title">Loading</h1>
 
     <!-- options-->
     <div class="options" id="options-container">
-      <!-- just for test-->
-      <label class="option">
-        <input type="radio" name="answer" value="0"> Red
-      </label>
-      <label class="option">
-        <input type="radio" name="answer" value="1"> Blue
-      </label>
-      <label class="option">
-        <input type="radio" name="answer" value="2"> Yellow
-      </label>
-      <label class="option">
-        <input type="radio" name="answer" value="3"> Green
-      </label>
     </div>
     <!-- question status-->
-    <div id="question-status" class="question-status">Question 1 <span>/ 10</span></div>
+    <div id="question-status" class="question-status">
+    </div>
   </div>
 
   <script src="./assets/js/test.js"></script>
