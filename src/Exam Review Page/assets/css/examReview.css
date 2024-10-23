@@ -87,6 +87,7 @@ hr {
   min-width: 95%;
   color: white;
   border: none;
+  outline: none;
   background-color: transparent;
   margin-left: 20px;
   margin-bottom: 7px;
