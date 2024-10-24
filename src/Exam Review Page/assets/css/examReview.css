@@ -72,11 +72,6 @@ hr {
 .stars {
   min-width: 40px;
   margin-inline: 8px;
-  filter: invert(54%) sepia(75%) saturate(537%) hue-rotate(130deg) brightness(20%) contrast(101%);
-}
-
-.starsColor {
-  filter: invert(54%) sepia(75%) saturate(537%) hue-rotate(130deg) brightness(104%) contrast(101%);
 }
 
 #feedback {
