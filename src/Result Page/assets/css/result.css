@@ -64,13 +64,17 @@ strong {
     color: #00ffff;
 }
 
+#colorTxt {
+    color: #900080;
+}
+
 p {
     margin: 0;
 }
 
 div {
     display: inline-block;
-    width: 250px;
+    width: 230px;
     margin-bottom: 30px;
 }
 
@@ -103,6 +107,38 @@ button:hover {
     border-color: #00ffff;
 } */
 
+/* 
+ring {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: conic-gradient(#00ffff 66.7%, #900080 0 100%);
+    mask: radial-gradient(farthest-side, transparent calc(100% - 20px), black 100%);
+}
+
+.ring::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 180px;
+    height: 180px;
+    background-color: transparent;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.inner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: black;
+    z-index: 2;
+} */
+
 .divLeft {
     text-align: left;
 }
@@ -111,7 +147,8 @@ button:hover {
     text-align: right;
 }
 
-/* .paragraphIntoCircle {
+
+.paragraphIntoCircle {
     padding-inline: 30px;
     font-size: 14px;
     font-weight: 100;

@@ -194,6 +194,7 @@ function goToNextQuestion() {
   } else {
     localStorage.setItem("correctAnswers", correctAnswers);
     localStorage.setItem("incorrectAnswers", incorrectAnswers);
+    localStorage.setItem("questionsLength", questions.length);
     window.open("/src/Result Page/result.html", "_self");
   }
 }
