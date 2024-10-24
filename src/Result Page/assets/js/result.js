@@ -38,22 +38,8 @@ if (resultCorrect(correctAnswers) >= 60) {
   colorTxt.classList.add("colorTxt");
 }
 
-// //Ring
-// const ring = document.querySelector(".ring");
-
-// const colorTopRight = `rgba(144, 0, 128, ${
-//   resultCorrect(correctAnswers) / 100
-// })`;
-// const colorBottomLeft = `rgba(0, 255, 255,${
-//   resultWrong(incorrectAnswers) / 100
-// })`;
-
-// ring.style.borderTopColor = colorTopRight;
-// ring.style.borderRightColor = colorTopRight;
-// ring.style.borderBottomColor = colorBottomLeft;
-// ring.style.borderLeftColor = colorBottomLeft;
-
-console.log("CorrectAnsw", correctAnswers);
-console.log("IncorrectAnsw", incorrectAnswers);
-console.log("TotalQuestions", questionsLength);
-console.log(resultCorrect(correctAnswers));
+//circle
+const circle = document.querySelector(".circle");
+circle.style.background = `conic-gradient(#D20094 ${
+  100 - resultCorrect(correctAnswers)
+}%, #00ffff 0 100%)`;

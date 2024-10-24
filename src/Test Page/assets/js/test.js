@@ -120,7 +120,7 @@ function startTimer() {
     // Aggiorna la barra del timer
     document.querySelector(
       ".timer-container"
-    ).style.background = `conic-gradient(#00b0ff ${percentage}%, #3f3c56 ${percentage}%)`;
+    ).style.background = `conic-gradient(#00ffff ${percentage}%, #3f3c56 ${percentage}%)`;
 
     // Se il tempo è scaduto, passa alla prossima domanda
     if (timeRemaining <= 0) {

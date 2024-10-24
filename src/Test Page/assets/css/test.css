@@ -39,7 +39,7 @@ body {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    background: conic-gradient(#00b0ff 100%, transparent 0%);
+    background: conic-gradient(#00ffff 100%, transparent 0%);
     display: flex;
     align-items: center;
     justify-content: center;
