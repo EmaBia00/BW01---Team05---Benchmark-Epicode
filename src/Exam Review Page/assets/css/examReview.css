@@ -74,6 +74,25 @@ hr {
   margin-inline: 8px;
 }
 
+.hide {
+  display: none;
+}
+
+.newImagePage {
+  text-align: center;
+  width: 300px;
+  height: auto;
+}
+
+.newFeedbackPage {
+  text-align: center;
+}
+
+#alertStar {
+  text-align: left;
+  margin-top: 15px;
+}
+
 #feedback {
   text-align: start;
 }
