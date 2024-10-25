@@ -20,7 +20,7 @@ body {
 }
 
 /* Logo*/
-.logo {
+#logo {
     padding-top: 0.5%;
     position: absolute;
     top: 40px;

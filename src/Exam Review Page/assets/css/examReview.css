@@ -79,13 +79,17 @@ hr {
 }
 
 .newImagePage {
-  text-align: center;
-  width: 300px;
+  margin-left: 310px;
+  width: 280px;
   height: auto;
 }
 
 .newFeedbackPage {
+  font-family: "Outfit", sans-serif;
   text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  margin-top: 60px;
 }
 
 #alertStar {

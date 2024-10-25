@@ -1,4 +1,12 @@
 const btn = document.querySelector("button");
+const logo = document.getElementById("logo");
+
+logo.onclick = () => {
+  window.open("/src/Welcome Page/welcome.html", "_self");
+};
+logo.onmouseover = () => {
+  logo.style.cursor = "pointer";
+};
 
 btn.onclick = () => {
   window.open("/src/Exam Review Page/examReview.html", "_self");
@@ -15,8 +23,7 @@ const resultCorrect = (correctAnswers) => {
 const correctPercent = document.getElementById("correctPercent");
 correctPercent.innerText = resultCorrect(correctAnswers) + "%";
 const correctQuestions = document.getElementById("correctQuestions");
-correctQuestions.innerText =
-  correctAnswers + "/" + questionsLength + " questions";
+correctQuestions.innerText = correctAnswers + "/" + questionsLength + " questions";
 
 //Risposte Sbagliate
 const resultWrong = (incorrectAnswers) => {
@@ -25,8 +32,7 @@ const resultWrong = (incorrectAnswers) => {
 const wrongPercent = document.getElementById("wrongPercent");
 wrongPercent.innerText = resultWrong(incorrectAnswers) + "%";
 const wrongQuestions = document.getElementById("wrongQuestions");
-wrongQuestions.innerText =
-  incorrectAnswers + "/" + questionsLength + " questions";
+wrongQuestions.innerText = incorrectAnswers + "/" + questionsLength + " questions";
 
 //Messaggio Risultato
 const messageTxt = document.getElementById("messageTxt");
@@ -40,6 +46,4 @@ if (resultCorrect(correctAnswers) >= 60) {
 
 //circle
 const circle = document.querySelector(".circle");
-circle.style.background = `conic-gradient(#D20094 ${
-  100 - resultCorrect(correctAnswers)
-}%, #00ffff 0 100%)`;
+circle.style.background = `conic-gradient(#D20094 ${100 - resultCorrect(correctAnswers)}%, #00ffff 0 100%)`;

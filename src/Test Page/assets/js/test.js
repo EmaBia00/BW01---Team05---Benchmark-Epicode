@@ -83,12 +83,20 @@ const questions = [
 ];
 
 // Definizione delle variabili principali
+const logo = document.getElementById("logo");
 let currentQuestionIndex = 0;
 let indexQuestionView = 1;
 let correctAnswers = 0;
 let incorrectAnswers = 0;
 let timerInterval;
 let questionAnswered = false;
+
+logo.onclick = () => {
+  window.open("/src/Welcome Page/welcome.html", "_self");
+};
+logo.onmouseover = () => {
+  logo.style.cursor = "pointer";
+};
 
 // Funzione per avviare il timer
 function startTimer() {

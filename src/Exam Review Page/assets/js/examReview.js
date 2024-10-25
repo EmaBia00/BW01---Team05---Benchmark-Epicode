@@ -1,8 +1,16 @@
 const divStars = document.getElementById("stars");
 const btn = document.querySelector("button");
 const inputTxt = document.getElementById("textFeed");
+const logo = document.getElementById("logo");
 let selectedRating = 0;
 let starColor;
+
+logo.onclick = () => {
+  window.open("/src/Welcome Page/welcome.html", "_self");
+};
+logo.onmouseover = () => {
+  logo.style.cursor = "pointer";
+};
 
 const createStars = (num) => {
   const star = [];
@@ -90,23 +98,26 @@ const refreshPage = (starRating) => {
     case 6:
       //Faccina negativo
       img.src = "./assets/img/bad.png";
-      p.innerText = "Ci dispiace che non abbia avuto un buon feedback";
+      p.innerText = "Ci dispiace per il feedback negativo! Adesso vai e cambi il voto in postivo...🤡";
+      p.style.color = "#D93737";
       break;
     case 7:
     case 8:
       //Faccina neutro
       img.src = "./assets/img/normal.png";
-      p.innerText = "Grazie per il feedback";
+      p.innerText = "Grazie per il feedback!";
+      p.style.color = "#ECBD3A";
       break;
     case 9:
     case 10:
       //Faccina positivo
       img.src = "./assets/img/good.png";
-      p.innerText = "Grazie per il feedback positivo";
+      p.innerText = "Grazie per il feedback positivo!";
+      p.style.color = "#84C451";
       break;
   }
-  page.appendChild(p);
   page.appendChild(img);
+  page.appendChild(p);
 };
 
 const checkIfVoted = () => {
