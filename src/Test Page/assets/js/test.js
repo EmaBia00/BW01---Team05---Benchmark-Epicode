@@ -124,10 +124,25 @@ function startTimer() {
   }, 1000);
 }
 
+function randomNum(array, param) {
+  const randomNumSet = [];
+  let randomNumber = 0;
+
+  while (randomNumSet.length < param) {
+    randomNumber = Math.floor(Math.random() * array.length);
+
+    if (!randomNumSet.includes(array[randomNumber])) {
+      randomNumSet.push(array[randomNumber]);
+    }
+  }
+
+  return randomNumSet;
+}
+
 // Funzione per caricare la domanda
 function loadQuestion() {
   questionAnswered = false;
-  const questionData = questions[currentQuestionIndex];
+  const questionData = questionRandomData[currentQuestionIndex];
   document.getElementById("question-title").textContent = questionData.question;
 
   const options = [];
