@@ -20,19 +20,19 @@ selectElement.onchange = () => {
 };
 
 btn.onclick = () => {
-  if (checkBox.checked) {
-    if (option !== "selectNumber") {
+  if (option !== "selectNumber") {
+    if (checkBox.checked) {
       localStorage.setItem("optionSelected", option);
       window.open("/src/Test Page/test.html", "_self");
     } else {
-      alertSelect.classList.remove("hide");
-      alertSelect.innerText = "WARNING! Select a number";
-      alertSelect.style.color = "red";
+      alertComment.innerText = "WARNING! Check the box to continue";
+      alertComment.style.color = "red";
+      alertComment.classList.remove("hide");
     }
   } else {
-    alertComment.innerText = "WARNING! Check the box to continue";
-    alertComment.style.color = "red";
-    alertComment.classList.remove("hide");
+    alertSelect.classList.remove("hide");
+    alertSelect.innerText = "WARNING! Select a number";
+    alertSelect.style.color = "red";
   }
 };
 
