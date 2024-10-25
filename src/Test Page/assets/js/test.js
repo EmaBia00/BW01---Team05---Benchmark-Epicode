@@ -139,6 +139,8 @@ function randomNum(array, param) {
   return randomNumSet;
 }
 
+const questionRandomData = randomNum(questions, questions.length);
+
 // Funzione per caricare la domanda
 function loadQuestion() {
   questionAnswered = false;
