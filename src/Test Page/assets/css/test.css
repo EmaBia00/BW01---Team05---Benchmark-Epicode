@@ -39,7 +39,7 @@ body {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    background: conic-gradient(#00ffff 100%, transparent 0%);
+    mask: radial-gradient(farthest-side, transparent calc(100% - 13px), black 0%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,15 +47,21 @@ body {
 }
 
 .timer-inner {
-    width: 100px;
-    height: 100px;
-    background-color: #602365;
+    width: 80px;
+    height: 80px;
+    background-color: transparent;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     flex-direction: column;
+}
+
+.timer-text-container {
+    float: right;
+    padding-right: 140px;
+    padding-top: 59px;
 }
 
 
@@ -87,7 +93,7 @@ body {
 /* main container that contains questions and options and covers the entire page */
 .container {
     width: 100%;
-    height: 100vh;
+    height: 75vh;
     display: grid;
     /* use the grid to arrange in the center */
     place-items: center;
@@ -98,7 +104,7 @@ body {
 /* main question */
 .question-title {
     width: 70%;
-    margin-top: 150px;
+    margin-top: 20px;
     font-size: 35px;
     margin-bottom: 0;
     color: #EAE8EF;
@@ -114,7 +120,7 @@ body {
     /* spazio tra le opzioni */
     width: 50%;
     /* la larghezza delle opzioni è l'80% della pagina */
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 
 .option {
@@ -151,7 +157,6 @@ input[type="radio"] {
     font-size: 18px;
     font-weight: bold;
     color: #ECE8F0;
-    margin-top: 10px;
 }
 
 .question-status span {
