@@ -1,8 +1,16 @@
+const logo = document.getElementById("logo");
 const btn = document.querySelector("button");
 const checkBox = document.getElementById("check1");
 const alertComment = document.getElementById("alertComment");
 const alertSelect = document.getElementById("alertSelect");
 const selectElement = document.getElementById("options");
+
+logo.onclick = () => {
+  window.open("/src/Welcome Page/welcome.html", "_self");
+};
+logo.onmouseover = () => {
+  logo.style.cursor = "pointer";
+};
 
 function getSelectedOption() {
   const selectedValue = selectElement.value;
