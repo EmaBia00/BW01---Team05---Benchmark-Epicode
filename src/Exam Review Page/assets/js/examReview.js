@@ -89,7 +89,7 @@ const refreshPage = (starRating) => {
     case 5:
     case 6:
       //Faccina negativo
-      img.src = "./assets/img/veryBad.png";
+      img.src = "./assets/img/bad.png";
       p.innerText = "Ci dispiace che non abbia avuto un buon feedback";
       break;
     case 7:
@@ -101,7 +101,7 @@ const refreshPage = (starRating) => {
     case 9:
     case 10:
       //Faccina positivo
-      img.src = "./assets/img/veryGood.png";
+      img.src = "./assets/img/good.png";
       p.innerText = "Grazie per il feedback positivo";
       break;
   }
