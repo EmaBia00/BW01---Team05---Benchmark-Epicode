@@ -80,11 +80,93 @@ const questions = [
     correct_answer: "Java",
     incorrect_answers: ["Python", "C", "Jakarta"],
   },
+  {
+    type: "multiple",
+    difficulty: "medium",
+    category: "Science: Computers",
+    question: "Approximately how many Apple I personal computers were created?",
+    correct_answer: "200",
+    incorrect_answers: ["100", "500", "1000"],
+  },
+  {
+    type: "multiple",
+    difficulty: "medium",
+    category: "Science: Computers",
+    question: "Moore&#039;s law originally stated that the number of transistors on a microprocessor chip would double every...",
+    correct_answer: "Year",
+    incorrect_answers: ["Four Years", "Two Years", "Eight Years"],
+  },
+  {
+    type: "multiple",
+    difficulty: "medium",
+    category: "Science: Computers",
+    question: "While Apple was formed in California, in which western state was Microsoft founded?",
+    correct_answer: "New Mexico",
+    incorrect_answers: ["Washington", "Colorado", "Arizona"],
+  },
+  {
+    type: "multiple",
+    difficulty: "medium",
+    category: "Science: Computers",
+    question: "In programming, the ternary operator is mostly defined with what symbol(s)?",
+    correct_answer: "?:",
+    incorrect_answers: ["??", "if then", "?"],
+  },
+  {
+    type: "multiple",
+    difficulty: "medium",
+    category: "Science: Computers",
+    question: "In HTML, which non-standard tag used to be be used to make elements scroll across the viewport?",
+    correct_answer: "&lt;marquee&gt;&lt;/marquee&gt;",
+    incorrect_answers: ["&lt;scroll&gt;&lt;/scroll&gt;", "&lt;move&gt;&lt;/move&gt;", "&lt;slide&gt;&lt;/slide&gt;"],
+  },
+  {
+    type: "boolean",
+    difficulty: "hard",
+    category: "Science: Computers",
+    question: "DHCP stands for Dynamic Host Configuration Port.",
+    correct_answer: "False",
+    incorrect_answers: ["True"],
+  },
+  {
+    type: "multiple",
+    difficulty: "hard",
+    category: "Science: Computers",
+    question: "Released in 2001, the first edition of Apple&#039;s Mac OS X operating system (version 10.0) was given what animal code name?",
+    correct_answer: "Cheetah",
+    incorrect_answers: ["Puma", "Tiger", "Leopard"],
+  },
+  {
+    type: "boolean",
+    difficulty: "hard",
+    category: "Science: Computers",
+    question: "The T-Mobile Sidekick smartphone is a re-branded version of the Danger Hiptop.",
+    correct_answer: "True",
+    incorrect_answers: ["False"],
+  },
+  {
+    type: "multiple",
+    difficulty: "hard",
+    category: "Science: Computers",
+    question: "What major programming language does Unreal Engine 4 use?",
+    correct_answer: "C++",
+    incorrect_answers: ["Assembly", "C#", "ECMAScript"],
+  },
+  {
+    type: "multiple",
+    difficulty: "hard",
+    category: "Science: Computers",
+    question: "According to DeMorgan&#039;s Theorem, the Boolean expression (AB)&#039; is equivalent to:",
+    correct_answer: "A&#039; + B&#039;",
+    incorrect_answers: ["A&#039;B + B&#039;A", "A&#039;B&#039;", "AB&#039; + AB"],
+  },
 ];
 
 // Definizione delle variabili principali
 const logo = document.getElementById("logo");
 const answersText = document.getElementById("answersText");
+const numberSelectedByUser = localStorage.getItem("optionSelected");
+console.log(numberSelectedByUser);
 let currentQuestionIndex = 0;
 let indexQuestionView = 1;
 let correctAnswers = 0;
@@ -137,10 +219,15 @@ function randomNum(array, param) {
     }
   }
 
+  randomNumSet.sort((a, b) => {
+    const difficultyOrder = { easy: 1, medium: 2, hard: 3 };
+    return difficultyOrder[a.difficulty] - difficultyOrder[b.difficulty];
+  });
+
   return randomNumSet;
 }
 
-const questionRandomData = randomNum(questions, questions.length);
+const questionRandomData = randomNum(questions, numberSelectedByUser);
 
 // Funzione per caricare la domanda
 function loadQuestion() {
@@ -168,7 +255,7 @@ function loadQuestion() {
   });
   const questionStatus = document.getElementById("question-status");
   indexQuestionView += currentQuestionIndex;
-  questionStatus.innerHTML = `Question ${indexQuestionView} <span> / ${questions.length}</span>`;
+  questionStatus.innerHTML = `Question ${indexQuestionView} <span> / ${numberSelectedByUser}</span>`;
   startTimer();
 }
 
@@ -203,14 +290,14 @@ function handleOptionSelect(selectedOption, selectedIndex) {
 
 // Funzione per passare alla prossima domanda
 function goToNextQuestion() {
-  if (currentQuestionIndex < questions.length - 1) {
+  if (currentQuestionIndex < numberSelectedByUser - 1) {
     indexQuestionView = 1;
     currentQuestionIndex++;
     loadQuestion();
   } else {
     localStorage.setItem("correctAnswers", correctAnswers);
     localStorage.setItem("incorrectAnswers", incorrectAnswers);
-    localStorage.setItem("questionsLength", questions.length);
+    localStorage.setItem("questionsLength", numberSelectedByUser);
     window.open("/src/Result Page/result.html", "_self");
   }
 }

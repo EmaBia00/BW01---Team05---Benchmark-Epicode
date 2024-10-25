@@ -45,7 +45,7 @@ p {
 }
 
 ul {
-    margin-block: 40px;
+    margin-block: 25px;
     line-height: 25px;
 }
 
@@ -77,14 +77,14 @@ label {
     font-weight: 500;
 }
 
-label {
+footer label {
     display: inline-block;
     cursor: pointer;
     position: relative;
     padding-left: 30px;
 }
 
-label:before {
+footer label:before {
     content: "";
     width: 16px;
     height: 16px;
