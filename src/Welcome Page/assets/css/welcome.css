@@ -103,10 +103,19 @@ input[type=checkbox]:checked+label:before {
 }
 
 .checkbox {
-    padding-top: 25px;
+    padding-top: 15px;
     display: inline-block;
+}
+
+.hide {
+    display: none;
 }
 
 #check1 {
     display: none;
+}
+
+#alertComment {
+    margin-top: 10px;
+    max-width: 300px;
 }
