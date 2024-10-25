@@ -163,3 +163,7 @@ input[type="radio"] {
     color: #f115b6dd;
     /* colore rosa per il numero di domande */
 }
+
+.hide {
+    display: none;
+}

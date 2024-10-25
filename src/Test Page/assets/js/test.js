@@ -84,6 +84,7 @@ const questions = [
 
 // Definizione delle variabili principali
 const logo = document.getElementById("logo");
+const answersText = document.getElementById("answersText");
 let currentQuestionIndex = 0;
 let indexQuestionView = 1;
 let correctAnswers = 0;
@@ -144,6 +145,7 @@ const questionRandomData = randomNum(questions, questions.length);
 // Funzione per caricare la domanda
 function loadQuestion() {
   questionAnswered = false;
+  answersText.classList.add("hide");
   const questionData = questionRandomData[currentQuestionIndex];
   document.getElementById("question-title").textContent = questionData.question;
 
@@ -174,6 +176,7 @@ function loadQuestion() {
 function handleOptionSelect(selectedOption, selectedIndex) {
   if (questionAnswered) return;
   questionAnswered = true;
+
   const options = document.querySelectorAll(".option");
   options.forEach((option, index) => {
     if (index === selectedIndex) {
@@ -183,11 +186,18 @@ function handleOptionSelect(selectedOption, selectedIndex) {
     }
   });
 
-  if (selectedOption === questions[currentQuestionIndex].correct_answer) {
+  if (selectedOption === questionRandomData[currentQuestionIndex].correct_answer) {
     correctAnswers++;
+    answersText.innerText = "Great! Correct Answer";
+    answersText.style.color = "green";
+    console.log("correct", answersText);
   } else {
     incorrectAnswers++;
+    answersText.innerText = "Ops! Wrong Answer";
+    answersText.style.color = "red";
+    console.log("incorrect", answersText);
   }
+  answersText.classList.remove("hide");
   setTimeout(goToNextQuestion, 500);
 }
 
